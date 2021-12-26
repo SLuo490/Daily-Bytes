@@ -15,48 +15,48 @@ Ex: Given the following strings...
 using namespace std;
 
 bool isValidPalindrome(string &str) {
-    // add both digit and alphabet to res
-    string res = "";
+  // add both digit and alphabet to res
+  string res = "";
 
-    for (auto ch : str) {
-        if (isalnum(ch)) {
-            res += tolower(ch);
-        }
+  for (auto ch : str) {
+    if (isalnum(ch)) {
+      res += tolower(ch);
     }
+  }
 
-    // check if valid palindrome
-    int j = res.length() - 1;
-    int i = 0;
-    while (i < j) {
-        if (res[i++] != res[j--]) {
-            return false;
-        }
+  // check if valid palindrome
+  int j = res.length() - 1;
+  int i = 0;
+  while (i < j) {
+    if (res[i++] != res[j--]) {
+      return false;
     }
-    return true;
+  }
+  return true;
 }
 
 void print(bool valid) {
-    valid ? cout << "True" : cout << "False";
-    cout << endl;
+  valid ? cout << "True" : cout << "False";
+  cout << endl;
 }
 
 int main() {
-    string str = "level";
-    string str2 = "algorithm";
-    string str3 = "A man, a plan, a canal: Panama";
-    string str4 = "0A";
+  string str = "level";
+  string str2 = "algorithm";
+  string str3 = "A man, a plan, a canal: Panama";
+  string str4 = "0A";
 
-    bool valid1 = isValidPalindrome(str);
-    print(valid1);
+  bool valid1 = isValidPalindrome(str);
+  print(valid1);
 
-    bool valid2 = isValidPalindrome(str2);
-    print(valid2);
+  bool valid2 = isValidPalindrome(str2);
+  print(valid2);
 
-    bool valid3 = isValidPalindrome(str3);
-    print(valid3);
+  bool valid3 = isValidPalindrome(str3);
+  print(valid3);
 
-    bool valid4 = isValidPalindrome(str4);
-    print(valid4);
+  bool valid4 = isValidPalindrome(str4);
+  print(valid4);
 
-    return 0;
+  return 0;
 }

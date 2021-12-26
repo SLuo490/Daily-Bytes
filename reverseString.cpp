@@ -8,27 +8,27 @@ Ex: Given the following strings...
 “civic”, return “civic”
 */
 
-#include <iostream> 
-#include <string> 
-using namespace std; 
+#include <iostream>
+#include <string>
+using namespace std;
 
 string reverseString(string& str) {
-  int j = str.length() - 1; 
-  int i = 0; 
+  int j = str.length() - 1;
+  int i = 0;
 
   while (i < j) {
-    swap(str[i], str[j]); 
-    i++; 
-    j--; 
+    swap(str[i], str[j]);
+    i++;
+    j--;
   }
-  return str; 
+  return str;
 }
 
 int main() {
-  string str = "The Daily Byte"; 
-  cout << reverseString(str) << endl; 
+  string str = "The Daily Byte";
+  cout << reverseString(str) << endl;
 
   string str2 = "";
-  cout << reverseString(str2) << endl; 
-  return 0; 
+  cout << reverseString(str2) << endl;
+  return 0;
 }
