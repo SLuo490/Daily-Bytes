@@ -34,10 +34,13 @@ int main() {
   int target2 = 8;
   vector<int> v3 = {4, 2, 6, 5, 2};
   int target3 = 4;
+  vector<int> v4 = {4, 2, 0, 5, 2};
+  int target4 = 0;
 
   cout << twoSum(v1, target1) << endl;
   cout << twoSum(v2, target2) << endl;
   cout << twoSum(v3, target3) << endl;
+  cout << twoSum(v4, target4) << endl;
 
   return 0;
 }
